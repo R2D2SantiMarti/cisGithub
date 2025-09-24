@@ -1,5 +1,5 @@
 /**
- * Description: this program converts currency
+ * Description: this program converts currency Japanese Yen and Taiwan Dollar to USD, conversion is both ways.
  * @author Jeffrey Chen 
  * @author: Arturo S. 
  * @since 9/17/2025
@@ -7,7 +7,9 @@
 
 import java.util.Scanner; 
 
+
 public class Currency {
+    // Introduction of the program to user
     public static void welcome() { 
         System.out.println("+++++++++++++++++++++++++++++++++++++++"); 
         System.out.println("This program converts following currency to USD in both way:"); 
@@ -16,10 +18,11 @@ public class Currency {
          
     }
 
-     
+    //Currency exchange rate
     static final double DOLLAR_YEN_RATIO = 147.71;
     static final double DOLLARS_TWD_RATIO = 30.31 ; 
 
+    //formulas for conversion currency
     public static double yen_to_dollar(double yen) {
         return yen / DOLLAR_YEN_RATIO;
     }
@@ -62,7 +65,7 @@ public static int menu(Scanner input) {
         
         Scanner in = new Scanner(System.in); //instatiating a scanner object
         welcome(); //function call 
-        int choice = menu(in);
+        int choice = menu(in); //menu method called
         double value; 
 
         switch (choice) { 
